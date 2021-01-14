@@ -25,6 +25,8 @@ export default class App extends Vue {
     public async created(): Promise<void> {
         this.$i18n.locale = this.currentLanguage;
         Axios.defaults.headers.post['Accept-Language'] = this.currentLanguage;
+
+        this.mainStore.actions.getUsers();
     }
 
     @Watch('currentLanguage')
