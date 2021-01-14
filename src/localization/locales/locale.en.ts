@@ -1,9 +1,13 @@
 const en = {
     views: {
         home: {
-            repositoryName: 'Repository name',
-            search: 'Search',
-            title: 'Ejercicio',
+            men: 'Men',
+            women: 'Women',
+            users: 'Users',
+            table: 'Table',
+            usersTotal: 'Total Users:',
+            name: 'Name',
+            email: 'Email',
         },
     },
 };
