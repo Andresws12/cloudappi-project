@@ -7,21 +7,30 @@
             <div class="card-content">
                 <div class="media">
                     <div class="media-left">
-                        <figure class="image is-48x48">
+                        <figure
+                            class="image is-48x48"
+                            data-cy="user-card-image-loading"
+                        >
                             <b-skeleton circle width="48px" height="48px" />
                         </figure>
                     </div>
-                    <div class="media-content">
+                    <div
+                        class="media-content"
+                        data-cy="user-card-title-loading"
+                    >
                         <p class="title is-4">
                             <b-skeleton />
                         </p>
-                        <p class="subtitle is-6">
+                        <p
+                            class="subtitle is-6"
+                            data-cy="user-card-subtitle-loading"
+                        >
                             <b-skeleton />
                         </p>
                     </div>
                 </div>
 
-                <div class="content">
+                <div class="content" data-cy="user-card-content-loading">
                     <b-skeleton />
                 </div>
             </div>

@@ -1,11 +1,14 @@
 <template>
     <div class="container user-cards-view">
-        <p class="title has-text-centered">{{ $t('views.home.users') }}</p>
+        <p class="title has-text-centered" data-cy="user-title">
+            {{ $t('views.home.users') }}
+        </p>
         <div class="columns" v-if="isLoading">
             <user-card-loading
                 v-for="index in 4"
                 :key="index"
                 class="column is-multiline is-mobile"
+                data-cy="user-card-loading"
             />
         </div>
         <div class="columns" v-else>
@@ -15,6 +18,7 @@
                 :id="user.id"
                 :userName="user.name"
                 :email="user.email"
+                data-cy="user-card"
                 class="column is-multiline is-mobile"
             />
         </div>

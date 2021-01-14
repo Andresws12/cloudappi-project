@@ -1,7 +1,7 @@
 <template>
-    <div class="section">
+    <div class="section user-table-overview" data-cy="users-table-overview">
         <div class="container">
-            <p class="subtitle">
+            <p class="subtitle" data-cy="users-table-subtitle">
                 {{ $t('views.home.table') }}
             </p>
             <b-table
