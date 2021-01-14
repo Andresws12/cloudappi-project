@@ -8,6 +8,7 @@ import { User } from '../../models/User';
 
 import { getUsers } from '@/webservices/UsersWebservice';
 
+import { sleep } from '../utils/sleep';
 export default class MainActions extends Actions<
     MainState,
     MainGetters,
@@ -20,6 +21,8 @@ export default class MainActions extends Actions<
             this.commit('startLoading', null);
 
             const users: User[] = await getUsers();
+
+            await sleep(2000);
 
             this.commit('setUsers', users);
         } finally {
