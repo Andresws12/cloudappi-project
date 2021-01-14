@@ -9,8 +9,8 @@ module.exports = {
 
     pwa: {
         name: 'Project CloudAppi',
-        themeColor: ' #ee7003',
-        msTileColor: '#000000',
+        themeColor: ' #263152',
+        msTileColor: '#263152',
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
         workboxOptions: {
