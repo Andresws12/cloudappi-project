@@ -22,7 +22,7 @@ export default class MainActions extends Actions<
 
             const users: User[] = await getUsers();
 
-            await sleep(2000);
+            await sleep(3000);
 
             this.commit('setUsers', users);
         } finally {

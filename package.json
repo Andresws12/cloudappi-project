@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:e2e": "cypress run --spec \"tests/e2e/specs/01Users.spec.ts\"",
     "format": "prettier --write \"./**/*.?(vue|ts|js|scss|html)\"",
     "format:check": "prettier --list-different \"./**/*.?(vue|ts|js|scss|html)\"",
     "lint:fix": "vue-cli-service lint --fix",

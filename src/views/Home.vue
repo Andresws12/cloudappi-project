@@ -1,5 +1,5 @@
 <template>
-    <div class="home-view section">
+    <div class="home-view section" data-cy="home-overview">
         <translations-button />
         <user-cards :users="users" :isLoading="isLoading" />
         <user-total

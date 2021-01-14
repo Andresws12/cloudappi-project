@@ -4,7 +4,7 @@
         icon-left="globe"
         class="translation-button"
         @click="changeLanguage()"
-        data-cy="translation"
+        data-cy="translation-button"
     >
         {{ currentLanguage }}
     </b-button>

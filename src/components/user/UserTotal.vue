@@ -1,20 +1,24 @@
 <template>
-    <div class="section">
+    <div class="section user-total-overview" data-cy="users-total-overview">
         <div class="container">
-            <p class="subtitle">
+            <p class="subtitle" data-cy="users-total-subtitle">
                 {{ $t('views.home.usersTotal') + ' ' + usersTotal }}
             </p>
-            <b-skeleton v-if="isLoading" />
-            <b-progress v-else size="is-medium" show-value :max="usersTotal">
-                <template #bar>
-                    <b-progress-bar :value="totalWomen" type="is-primary">
-                        {{ totalWomen + ' ' + $t('views.home.women') }}
-                    </b-progress-bar>
-                    <b-progress-bar :value="totalMen" type="is-info">
-                        {{ totalMen + ' ' + $t('views.home.men') }}
-                    </b-progress-bar>
-                </template>
-            </b-progress>
+            <div v-if="isLoading" data-cy="users-total-loading">
+                <b-skeleton />
+            </div>
+            <div v-else data-cy="users-total-progress-bar">
+                <b-progress size="is-medium" show-value :max="usersTotal">
+                    <template #bar>
+                        <b-progress-bar :value="totalWomen" type="is-primary">
+                            {{ totalWomen + ' ' + $t('views.home.women') }}
+                        </b-progress-bar>
+                        <b-progress-bar :value="totalMen" type="is-info">
+                            {{ totalMen + ' ' + $t('views.home.men') }}
+                        </b-progress-bar>
+                    </template>
+                </b-progress>
+            </div>
         </div>
     </div>
 </template>
