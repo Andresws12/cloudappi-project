@@ -1,11 +1,13 @@
 <template>
     <div id="app">
         <router-view />
+        <GithubButton />
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator';
+import GithubButton from '@/components/GithubButton.vue';
 
 import Axios from 'axios';
 
@@ -13,7 +15,9 @@ import mainStore from '@/store/main-store/MainStore';
 
 @Component({
     name: 'App',
-    components: {},
+    components: {
+        GithubButton,
+    },
 })
 export default class App extends Vue {
     private mainStore = mainStore.context(this.$store);
